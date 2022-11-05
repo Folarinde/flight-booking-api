@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "title": "flight to canada",
+    "time": "1pm",
+    "price": "26000",
+    "date": "26-06-2022"
+  },
+  {
+    "id": "2",
+    "title": "flight to Geneva",
+    "time": "2pm",
+    "price": "22000",
+    "date": "25-05-2022"
+  },
+  {
+    "id": "3",
+    "title": "flight to Abuja",
+    "time": "3pm",
+    "price": "29000",
+    "date": "24-07-2022"
+  },
+  {
+    "id": "4",
+    "title": "flight to Lagos",
+    "time": "12pm",
+    "price": "36000",
+    "date": "22-06-2022"
+  },
+  {
+    "id": "5",
+    "title": "flight to London",
+    "time": "4pm",
+    "price": "28000",
+    "date": "23-06-2022"
+  },
+  {
+    "id": "6",
+    "title": "flight to Chicago",
+    "time": "5pm",
+    "price": "30000",
+    "date": "29-06-2022"
+  },
+  {
+    "id": "7",
+    "title": "flight to Texas",
+    "time": "11am",
+    "price": "21000",
+    "date": "19-06-2022"
+  },
+  {
+    "id": "8",
+    "title": "flight to Atlanta",
+    "time": "1pm",
+    "price": "23000",
+    "date": "26-06-2022"
+  },
+  {
+    "id": "9",
+    "title": "flight to Uyo",
+    "time": "1pm",
+    "price": "16000",
+    "date": "26-06-2022"
+  },
+  {
+    "id": "10",
+    "title": "flight to Akure",
+    "time": "1pm",
+    "price": "12000",
+    "date": "26-06-2022"
+  },
+  {
+    "id": "11",
+    "title": "flight to Lekki",
+    "time": "10am",
+    "price": "16000",
+    "date": "26-06-2023"
+  }
+]
