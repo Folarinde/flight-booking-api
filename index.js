@@ -16,7 +16,6 @@ app.get('/flight', (req, res) => {
 
 // This creates/adds a new flight and saves it to the database in flight.json
 app.post('/flight', (req, res) => {
-  console.log(req.body);
   flight.push(req.body.newFlight);
   let stringedData = JSON.stringify(flight, null, 2);
   fs.writeFile('flight.json', stringedData, (err) => {
@@ -33,7 +32,11 @@ app.get('/flight/:id', (req, res) => {
   let foundFlight = flight.find((booking) => {
     return String(booking.id) === id;
   });
-  console.log(foundFlight);
+  if (foundFlight) {
+    return res.status(200).json({ flight: foundFlight });
+  } else {
+    return res.status(404).json({ message: 'Flight not found!' });
+  }
 });
 
 const port = process.env.PORT || 3000;
