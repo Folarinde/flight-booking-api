@@ -39,6 +39,36 @@ app.get('/flight/:id', (req, res) => {
   }
 });
 
+// This is to delete a flight
+app.delete('/flight/:id', (req, res) => {
+  const itemIndex = flight.findIndex(({ id }) => id === req.params.id);
+  if (itemIndex >= 0) {
+    flight.splice(itemIndex, 1);
+    let stringData = JSON.stringify(flight, null, 2);
+    fs.writeFile('flight.json', stringData, (err) => {
+      if (err) {
+        return res.status(500).json({ message: err });
+      }
+    });
+    return res.status(200).json({ message: 'flight deleted successfully' });
+  }
+});
+
+// This is to update/edit a flight
+app.put('/flight/:id', (req, res) => {
+  const itemIndex = flight.findIndex(({ id }) => id === req.params.id);
+  if (itemIndex >= 0) {
+    flight.splice(itemIndex, 1, req.body.updatedFlight);
+    let stringData = JSON.stringify(flight, null, 2);
+    fs.writeFile('flight.json', stringData, (err) => {
+      if (err) {
+        return res.status(500).json({ message: err });
+      }
+    });
+    return res.status(200).json({ message: 'flight updated successfully' });
+  }
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
